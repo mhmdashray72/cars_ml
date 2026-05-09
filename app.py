@@ -35,26 +35,4 @@ def load_data():
             df.drop(col, axis=1, inplace=True)
 
     # Handle missing values
-    df["mileage"] = df["mileage"].fillna(df["mileage"].median())
-
-    # Remove duplicates
-    df = df.drop_duplicates()
-
-    return df
-
-
-df = load_data()
-
-# =========================
-# MODEL TRAINING
-# =========================
-
-X = df.drop("price", axis=1)
-y = df["price"]
-
-categorical_cols = X.select_dtypes(include="object").columns.tolist()
-numerical_cols = X.select_dtypes(exclude="object").columns.tolist()
-
-numeric_transformer = Pipeline([
-    ("imputer", SimpleImputer(strategy="median"))
         st.balloons()
