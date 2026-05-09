@@ -99,7 +99,7 @@ r2 = r2_score(y_test, predictions)
 st.sidebar.title("🚗 Navigation")
 page = st.sidebar.radio(
     "Go To",
-    ["Home", "Insights Dashboard", "Prediction"]
+    ["Home page", "Insights Dashboard", "Prediction"]
 )
 
 # =========================
